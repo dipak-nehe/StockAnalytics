@@ -2,8 +2,8 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-email = "deep022in.jenkins@gmail.com"
-password = "Vedant@100"
+email = "your_email"
+password = "your_password"
 
 
 def send_sms(subject, content):
