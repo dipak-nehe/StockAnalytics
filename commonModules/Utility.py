@@ -10,6 +10,11 @@ pathString = Path(input_data_project_file_path)
 output_excel_file_path = (base_path / "../Output/output.").resolve()
 output_excel_filename = ""
 
+# % Deviation
+deviation = -25.00
+stock_vgm_score = ["A", "B"]
+stock_rating = ["1", "2"]
+
 
 # Generate unique output file to write
 def unique_output_file(file_name):

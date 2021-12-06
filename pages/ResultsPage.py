@@ -1,9 +1,8 @@
 import re
-
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.by import By
 
-
+# resultpage class
 class ResultsPage:
     stock_recommendation = (By.XPATH, "//*[@id=\"premium_research\"]/div/dl[1]/dd/span")
     stock_recommendation1 = (By.XPATH, "//*[@id=\"premium_research\"]/div/dl[1]/dd")

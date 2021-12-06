@@ -2,12 +2,12 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-email = "youremail@gmail.com"
-password = "your_password"
+email = "deep022in.jenkins@gmail.com"
+password = "Vedant@100"
 
 
 def send_sms(subject, content):
-    sms_gateway = 'your-mobile-number@tmomail.net'
+    sms_gateway = '2014236050@tmomail.net'
     # The server we use to send emails in our case it will be gmail but every email provider has a different smtp
     # and port is also provided by the email provider.
     smtp = "smtp.gmail.com"

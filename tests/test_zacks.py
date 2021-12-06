@@ -27,7 +27,7 @@ def test_stocks(browser, stock):
         stock_vgm_score = result_page.get_vgm_score()
         percent_deviation_from_52_week_High = Utility.calculate_percent_less_or_more_the_stock_trading(
             stock_last_price, week_52_high, week_52_low)
-        if stock_rating in ["1", "2"] and stock_vgm_score in ["A", "B"] and percent_deviation_from_52_week_High < -10.00:
+        if stock_rating in Utility.stock_rating and stock_vgm_score in Utility.stock_vgm_score and percent_deviation_from_52_week_High < Utility.deviation:
             body = "Zack's rating {} VGM score {} last pr {} with 52_wk_hgh {} and 52_wk_lw {} with dividend {} " \
                    "having {}% deviation".format(stock_rating, stock_vgm_score, stock_last_price, week_52_high,
                                                  week_52_low, dividend,

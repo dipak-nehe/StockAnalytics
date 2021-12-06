@@ -1,4 +1,5 @@
 import json
+import pathlib
 import pytest
 from selenium import webdriver
 
@@ -6,7 +7,7 @@ from selenium import webdriver
 @pytest.fixture
 def config(scope='session'):
     # Read the file
-    with open('C:\\Users\\dipak\\PycharmProjects\\zacks\\config.json') as config_file:
+    with open(pathlib.Path(r'..\\config.json')) as config_file:
         config = json.load(config_file)
 
     # Assert values
