@@ -6,8 +6,11 @@ from selenium import webdriver
 
 @pytest.fixture
 def config(scope='session'):
+    base_path = pathlib.Path(__file__).parent
+    file_path = (base_path / "../config.json").resolve()
+    print(file_path)
     # Read the file
-    with open(pathlib.Path(r'../config.json')) as config_file:
+    with open(file_path) as config_file:
         config = json.load(config_file)
 
     # Assert values
