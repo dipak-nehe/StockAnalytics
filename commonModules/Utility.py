@@ -1,24 +1,21 @@
 import datetime
 from pathlib import Path
 import openpyxl
+from datetime import datetime
 
 # Path("/zacks/data/stocks.xlsx")
 base_path = Path(__file__).parent
 input_data_project_file_path = (base_path / "../data/stocks.xlsx").resolve()
+# print(input_data_project_file_path)
 pathString = Path(input_data_project_file_path)
 # Output File Name
 output_excel_file_path = (base_path / "../Output/output.").resolve()
 output_excel_filename = ""
 
 # % Deviation
-deviation = -25.00
+deviation = -15.00
 stock_vgm_score = ["A", "B"]
 stock_rating = ["1", "2"]
-
-
-# Generate unique output file to write
-def unique_output_file(file_name):
-    return Path(file_name + str(get_time_stamp()) + ".xlsx")
 
 
 def read_excel(loc):
@@ -102,3 +99,18 @@ def calculate_percent_less_or_more_the_stock_trading(stock_last_price, week_52_h
         percent_less_than_all_time_high = 0.0
 
     return round(percent_less_than_all_time_high, 4) * 100
+
+
+def get_time_stamp():
+    # Getting the current date and time
+    dt = datetime.now()
+
+    # getting the timestamp
+    ts = datetime.timestamp(dt)
+
+    return ts
+
+
+# Generate unique output file to write
+def unique_output_file(file_name):
+    return str(file_name) + str(get_time_stamp()) + ".xlsx"
